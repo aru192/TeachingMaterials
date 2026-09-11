@@ -1,0 +1,57 @@
+/* --- 本文全体のフォントサイズと行間 --- */
+body {
+  font-size: 9.5pt !important;
+  line-height: 1.4 !important;
+}
+
+/* --- 見出しの余白削減 --- */
+h1 { font-size: 16pt !important; margin: 8px 0 4px 0 !important; }
+h2 { font-size: 13pt !important; margin: 6px 0 3px 0 !important; }
+h3 { font-size: 11pt !important; margin: 4px 0 2px 0 !important; }
+
+/* --- コードブロック全体の枠組みとフォント設定 --- */
+pre {
+  font-size: 1pt !important;           /* コードの文字サイズ */
+  line-height: 0.1 !important;         /* 行間 */
+  background-color: #f5f5f5 !important;/* 薄いグレー背景 */
+  border: 1px solid #333333 !important; /* 濃い枠線 */
+  border-radius: 3px !important;       /* 角丸 */
+  padding: 4px 6px !important;
+  margin: 4px 0 !important;
+}
+
+/* --- インラインコード（本文中の `コード`）の調整 --- */
+p code, li code {
+  font-size: 7.5pt !important;
+  background-color: #eeeeee !important;
+  border: 1px solid #999999 !important;
+  padding: 1px 4px !important;
+  color: #000000 !important;
+}
+
+/* --- コード内のすべての文字（黄色ハイライト等を含む）を他のコードと同じ表示に完全に統一 --- */
+pre code,
+pre code *,
+pre code span,
+pre code span[class*="hljs-"] {
+  font-size: 8pt !important;
+  color: #000000 !important;          /* すべて黒文字に統一 */
+  opacity: 1 !important;              /* 半透明化（薄表示）を解除 */
+  background: transparent !important; /* 背景の文字ハイライトを解除 */
+  font-weight: normal !important;     /* 太字を解除（他のコードと同じ太さに） */
+  font-style: normal !important;      /* 斜体を解除 */
+  text-shadow: none !important;
+}
+
+/* --- コメント文（// や # の後ろ）のみ斜体＋グレーで区別したい場合 --- */
+pre code .hljs-comment,
+pre code .hljs-quote {
+  color: #555555 !important;         /* コメントのみ少し濃い目のグレー */
+  font-style: italic !important;     /* 斜体にして区別 */
+}
+
+/* --- 段落やリストの余白削減 --- */
+p, ul, ol {
+  margin-top: 2px !important;
+  margin-bottom: 4px !important;
+}
